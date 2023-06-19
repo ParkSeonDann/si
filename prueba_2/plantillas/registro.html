@@ -1,0 +1,83 @@
+{% extends 'padre/base.html' %}
+{% block titulo %}
+Bienvenido :D
+{% endblock titulo %}
+
+{%  block contenido %}
+<main class="container">
+    <form method="POST">
+        {% csrf_token %}
+        <section class="row">
+            <h1 class="text-center">Bienvenido</h1>
+        </section>
+        <!-- Les dejo un ejemplo para que puedan imprimir los campos que faltan -->
+        <section class="row">
+            <fieldset class="col-12">
+                <label for="{{ formulario.username.id_for_label }}"> {{ formulario.username.label }}</label>
+                {{ formulario.username }}
+                {{ formulario.username.help_text }}
+                <p class="invalid-feedback">
+                    {{formulario.username.errors }}
+                </p>
+            </fieldset>
+        </section>
+        <section class="row">
+            <fieldset class="col-6">
+                <label for="{{ formulario.first_name.id_for_label }}"> {{ formulario.first_name.label }}</label>
+                {{ formulario.first_name }}
+                {{ formulario.first_name.help_text }}
+                <p class="invalid-feedback">
+                    {{formulario.first_name.errors }}
+                </p>
+            </fieldset>
+            <fieldset class="col-6">
+                <label for="{{ formulario.last_name.id_for_label }}"> {{ formulario.last_name.label }}</label>
+                {{ formulario.last_name }}
+                {{ formulario.last_name.help_text }}
+                <p class="invalid-feedback">
+                    {{formulario.last_name.errors }}
+                </p>
+            </fieldset>
+        </section>
+        <section class="row">
+            <fieldset class="col-12">
+                <label for="{{ formulario.email.id_for_label }}"> {{ formulario.email.label }}</label>
+                {{ formulario.email }}
+                {{ formulario.email.help_text }}
+                <p class="invalid-feedback">
+                    {{formulario.email.errors }}
+                </p>
+            </fieldset>
+        </section>
+        <section class="row">
+            <fieldset class="col-6">
+                <label for="{{ formulario.password1.id_for_label }}"> {{ formulario.password1.label }}</label>
+                {{ formulario.password1 }}
+                {{ formulario.password1.help_text }}
+                <p class="invalid-feedback">
+                    {{formulario.password1.errors }}
+                </p>
+            </fieldset>
+            <fieldset class="col-6">
+                <label for="{{ formulario.password2.id_for_label }}"> {{ formulario.password2.label }}</label>
+                {{ formulario.password2 }}
+                {{ formulario.password2.help_text }}
+                <p class="invalid-feedback">
+                    {{formulario.password2.errors }}
+                </p>
+            </fieldset>
+        </section>
+        <!-- Botton de envio -->
+        <section class="row">
+            <fieldset class="offset-md-4 col-md-4 col-12">
+                <div class="d-grid">
+                    <button class="btn btn-success" role="submit" type="submit">
+                        Registrar 
+                    </button>
+                </div>
+            </fieldset>
+        </section>
+    </form>
+</main>
+
+{%  endblock contenido %}

@@ -1,0 +1,14 @@
+{% extends 'padre/base.html' %}
+
+{% block titulo %}
+Nueva Publicación
+{% endblock titulo %}
+
+{% block contenido %}
+<h1> Hola desde agregar :D </h1>
+<form method="POST">
+    {% csrf_token %}
+    {{ formulario }}
+    <button type="submit" role="submit">Guardar</button>
+</form>
+{% endblock contenido %}

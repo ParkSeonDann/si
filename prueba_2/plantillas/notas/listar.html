@@ -1,0 +1,21 @@
+{% extends 'padre/base.html' %}
+
+{% block titulo %}
+Publicaciones 
+{% endblock titulo %}
+
+{% block contenido %}
+<h1> Mis publicaciones </h1>
+{% for publicacion in publicaciones %}
+<hr>
+{{ publicacion.id }}
+{{ publicacion.titulo }}
+{{ publicacion.detalle }}
+{{ publicacion.fecha_publicacion }}
+{{ publicacion.usuario.username }}
+{{ publicacion.usuario.first_name }}
+{{ publicacion.usuario.last_name }}
+{ publicacion.usuario.email }
+<hr>
+{% endfor %}
+{% endblock contenido %}

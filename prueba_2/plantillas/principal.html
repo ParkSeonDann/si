@@ -1,0 +1,236 @@
+{% extends 'padre/base.html' %}
+{% load static %}
+{% block titulo %}
+Inicio
+{% endblock titulo %}
+{% block css %}
+<style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+
+    .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+    }
+
+    .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+    }
+
+    .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+    }
+
+    .bd-mode-toggle {
+        z-index: 1500;
+    }
+</style>
+
+<!-- Estilos propios de esta pagina  -->
+<link href="{% static 'dist/css/carousel.css' %}" rel="stylesheet">
+{% endblock css %}
+
+{% block contenido %}
+<main>
+
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="{% static 'img/field175959_1920.jpg' %}">
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>Vive Recuerdos hermosos</h1>
+                        <p>Viaja con nosotros y revive nuestros recuerdos</p>
+                        <p><a class="btn btn-lg btn-primary" href="./recuerdos.html">Ver recuerdos</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="{% static 'img/field175959_1920.jpg' %}">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Precios siempre bajos</h1>
+                        <p>Tenemos los mejores precios del mercado</p>
+                        <p><a class="btn btn-lg btn-primary" href="./precios.html">Ver precios</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="{% static 'img/idaho239691_1920.jpg' %}">
+                <div class="container">
+                    <div class="carousel-caption text-end">
+                        <h1>Una gran galeria y familia</h1>
+                        <p>Ven a ver nuestra galeria de fotografias</p>
+                        <p><a class="btn btn-lg btn-primary" href="./historial.html">Ver fotos</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+
+
+    <!-- Marketing messaging and featurettes
+  ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="{% static 'img/maravilla_1.webp' %}" class="bd-placeholder-img rounded-circle" width="140"
+                    height="140">
+                <h2 class="fw-normal">Hermoso</h2>
+                <p>Vive las mejores experiencias del mundo</p>
+
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img src="{% static 'img/maravilla_2.webp' %}" class="bd-placeholder-img rounded-circle" width="140"
+                    height="140">
+                <h2 class="fw-normal">Conoce</h2>
+                <p>Conoce nuevas culturas del mundo a un solo click
+                </p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img src="{% static 'img/maravilla_3.webp' %}" class="bd-placeholder-img rounded-circle" width="140"
+                    height="140">
+                <h2 class="fw-normal">Experimenta</h2>
+                <p>Experimenta las mejores experiencias sobre nuevos lugares</p>
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading fw-normal lh-1">Viajes que<span class="text-body-secondary">
+                        Recuerdan</span></h2>
+                <p class="lead">
+                    Algun lugar hermoso te espera
+                </p>
+            </div>
+            <div class="col-md-5">
+                <img src="{% static 'img/maravilla_4.webp' %}"
+                    class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                    height="500">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading fw-normal lh-1">Oh sí, es así de bueno. <span class="text-body-secondary">
+                        Compruébelo usted mismo.</span></h2>
+                <p class="lead">Más contenido de marcador de posición aquí para darle una idea de cómo esto
+                    El diseño funcionaría con algún contenido real del mundo real en su lugar.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img src="{% static 'img/maravilla_5.webp' %}"
+                    class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                    height="500">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading fw-normal lh-1">Y por último, este. <span
+                        class="text-body-secondary">Jaque mate.</span></h2>
+                <p class="lead">Y sí, este es el último bloque de contenido de marcador de posición representativo. Una
+                    vez más, no realmente
+                    destinado a ser leído, simplemente aquí para darle una mejor visión de cómo se vería esto con
+                    algunos
+                    contenido real.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="{% static 'img/maravilla_6.webp' %}"
+                    class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                    height="500">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
+
+
+    <!-- FOOTER -->
+    {% include 'padre/footer.html' %}
+</main>
+{% endblock contenido %}
+{% block footer %}
+{% endblock footer %}
